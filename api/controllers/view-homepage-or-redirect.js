@@ -26,7 +26,9 @@ module.exports = {
   fn: async function () {
 
     if (this.req.me) {
-      throw {redirect:'/welcome'};
+      throw {redirect:'/'};
+    }else{
+      throw {redirect:'/login'};
     }
 
     return {};
